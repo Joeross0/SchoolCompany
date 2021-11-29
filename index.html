@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Home | Company Name</title>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">
+      <div class="button">
+        Home
+      </div>
+    </a>
+    <a href="services.html">
+      <div class="button">
+        Services
+      </div>
+    </a>
+    <a href="about.html">
+      <div class="button">
+        About
+      </div>
+    </a>
+  </nav>
+  <div class="header">
+    <h1 class="title">Company Name</h1>
+    <p class="slogan">Dedicated to quality... or something generic like that</p>
+  </div>
+</header>
+<section class="other">
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="Assets/Slide1.png" class="slide-img">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Assets/Slide2.png" class="slide-img">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Assets/Slide3.png" class="slide-img">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)"><img src="Assets/SlideArrow.png"></a>
+  <a class="next" onclick="plusSlides(1)"><img src="Assets/SlideArrow.png"></a>
+
+  <div style="text-align:center">
+    <form action="Services.html">
+      <input class="get-started btn" type="submit" value="Get Started">
+    </form>
+  </div>
+
+  </div>
+  <br>
+  </section>
+  <section>
+    <h2 class="ourServices">Our Services</h2>
+    <div class="serviceContainer">
+      <div class="serviceBox">
+        <h2 class="serviceHeader">Service 1</h2>
+        <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="serviceButton">Check It Out</div>
+      </div>
+      <div class="serviceBox">
+        <h2 class="serviceHeader">Service 2</h2>
+        <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="serviceButton">Check It Out</div>
+      </div>
+      <div class="serviceBox">
+        <h2 class="serviceHeader">Service 3</h2>
+        <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="serviceButton">Check It Out</div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section class="slideshow-container">
+    <h2 class="ourServices">Reviews</h2>
+
+<footer>
+    <div class="service-container">
+        <div class="footer">
+            <h2 style="margin:0;">My Company Name © 2021</h2>
+            <p style="margin:0; text-align: right;">...Another Inspiring Quote</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+//Slideshow code
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+</body>
+</html>
+</body>
+</html>
