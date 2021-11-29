@@ -20,7 +20,7 @@ h2, h1{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 400px;
+  height: 600px;
   padding-top: 10px;
   padding-bottom: 50px;
 }
@@ -41,12 +41,12 @@ h2, h1{
 }
 /* Position the "next button" to the right */
 .next {
-  right: 10%;
+  right: 5%;
   border-radius: 3px 0 0 3px;
   
 }
 .prev{
-  left: 10%;
+  left: 5%;
   border-radius: 3px 0 0 3px;
   transform: rotate(180deg);
 }
