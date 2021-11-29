@@ -1,3 +1,27 @@
+:root{
+  --orange: #f3750088;
+  --green:  #0BD11F;
+  --blue: #09B1BC;
+  --grey: #777575;
+}
+
+nav {
+  background-color: var(--grey);
+  font-size: 36px;
+  padding: 10px;
+  display: flex;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav a:hover {
+  background-color: var(--grey);
+}
+.button {
+  margin: 10px 70px 10px 70px; /* So that you don't keep forgetting: margin format goes top right bottom left */
+}
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -12,8 +36,14 @@ h2, h1{
   position: relative;
   margin: auto;
   background-color: #f3750088;
-  
 
+
+}
+
+.slidshow-background{
+  background-image: url("Assets/slideshow Background.png");
+  background-repeat: no-repeat;
+  background-position:top;
 }
 
 .slide-img{
@@ -31,13 +61,14 @@ h2, h1{
   position: absolute;
   top: 30%;
   width: auto;
+  margin-top: 3%;
   padding: 16px;
-  transition: 0.6s ease;
   /* border-radius: 0 3px 3px 0; */
   user-select: none;
 }
 .prev img, .next img{
-  width: 10%;
+  width: 25%;
+  margin-right: -300px;
 }
 /* Position the "next button" to the right */
 .next {
@@ -49,12 +80,13 @@ h2, h1{
   left: 5%;
   border-radius: 3px 0 0 3px;
   transform: rotate(180deg);
+  
 }
 
 /* default button */
 .btn{
   font-size: 30px;
-  background: #0BD11F;
+  background: var(--green);
   border: none;
   box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -66,11 +98,11 @@ h2, h1{
   width: 200px;
   height: 50px;
   border: 3px solid #000000;
-  
+
   }
 
 .learn-more{
-  background: #09B1BC;
+  background: var(--blue);
   margin: 25px;
   padding: 2.5%;
   color: white;
@@ -79,37 +111,26 @@ h2, h1{
   height: 50px;
   vertical-align: middle;
 }
+.serviceButton {
+  background-color: var(--blue);
+  color: white;
+
+  padding: 5%;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5em;
+  width: 55%;
+  margin: auto;
+}
 
 .purchase{
-  background-color:#0BD11F;
+  background-color:var(--green);
   margin: 0;
   padding: 2.5%;
   color: white;
   width: 70%;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
 
 /* ~~SERVICES PAGE~~ */
 .service-container{
@@ -117,7 +138,7 @@ h2, h1{
   color: whitesmoke;
 }
 .backgrd{
-  background: #777575;
+  background: var(--grey);
   width: 65%;
   margin: auto;
   color: whitesmoke;
@@ -189,7 +210,7 @@ h2, h1{
   margin-right: 40px;
 }
 .review-date{
-  color: rgba(255, 255, 255, 0.397);
+  color: var(--orange);
   position: relative;
   margin-top: -2%;
   margin-left: 10px;
@@ -198,9 +219,35 @@ h2, h1{
 
 .description{
   padding: 10px;
-  
-  border-left: 2px solid #f3750088;
-  border-bottom: 2px solid #f3750088;
+
+  border-left: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
 }
 
+.serviceContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+}
+.ourServices {
+  text-align: center;
+  font-weight: normal;
+  font-size: 3em;
+}
+.serviceBox {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 20%;
+  padding: 10px;
+  margin: 0px;
+}
+.serviceHeader {
+  text-align: center;
+  font-size: 2.5em;
+}
+.serviceText {
+  text-align: center;
+  padding: 25px;
+}
 

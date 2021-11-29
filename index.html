@@ -37,16 +37,19 @@
 <section class="other">
   <div class="slideshow-container">
 
-  <div class="mySlides fade">
-    <img src="Assets/Slide1.png" class="slide-img">
-  </div>
+    <div class="slidshow-background">
+    
+    <div class="mySlides fade">
+      <img src="Assets/Slide1.png" class="slide-img">
+    </div>
 
-  <div class="mySlides fade">
-    <img src="Assets/Slide2.png" class="slide-img">
-  </div>
+    <div class="mySlides fade">
+      <img src="Assets/Slide2.png" class="slide-img">
+    </div>
 
-  <div class="mySlides fade">
-    <img src="Assets/Slide3.png" class="slide-img">
+    <div class="mySlides fade">
+      <img src="Assets/Slide3.png" class="slide-img">
+    </div>
   </div>
 
   <a class="prev" onclick="plusSlides(-1)"><img src="Assets/SlideArrow.png"></a>
@@ -77,14 +80,14 @@
       <div class="serviceBox">
         <h2 class="serviceHeader">Service 3</h2>
         <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <div class="serviceButton">Check It Out</div>
+        <div class="serviceButton btn">Check It Out</div>
       </div>
     </div>
   </section>
   <br>
   <section class="slideshow-container">
     <h2 class="ourServices">Reviews</h2>
-
+  </section>
 <footer>
     <div class="service-container">
         <div class="footer">
@@ -110,22 +113,13 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
 </script>
-
-
-</body>
-</html>
 </body>
 </html>
