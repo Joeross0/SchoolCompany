@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Company Title </h1>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="Assets/Slide1.png" class="slide-img">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Assets/Slide2.png" class="slide-img">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Assets/Slide3.png" class="slide-img">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)"><img src="Assets/SlideArrow.png"></a>
+  <a class="next" onclick="plusSlides(1)"><img src="Assets/SlideArrow.png"></a>
+
+  <div style="text-align:center">
+    <form action="Services.html">
+      <input class="get-started btn" type="submit" value="Get Started">
+    </form>
+  </div>
+
+  </div>
+  <br>
+
+  
+
+<script>
+//Slideshow code
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+<footer>
+  <div class="service-container">
+      <div class="footer">
+          <h2 style="margin:0;">My Company Name © 2021</h2>
+          <p style="margin:0; text-align: right;">...Another Inspiring Quote</p>
+      </div>
+  </div>
+</footer>
+</html> 

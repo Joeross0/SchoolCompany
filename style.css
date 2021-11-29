@@ -1,0 +1,206 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+h2, h1{
+  text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.267);
+}
+
+/* Slideshow container */
+.slideshow-container, .service-container{
+  position: relative;
+  margin: auto;
+  background-color: #f3750088;
+  
+
+}
+
+.slide-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  transition: 0.6s ease;
+  /* border-radius: 0 3px 3px 0; */
+  user-select: none;
+}
+.prev img, .next img{
+  width: 10%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 10%;
+  border-radius: 3px 0 0 3px;
+  
+}
+.prev{
+  left: 10%;
+  border-radius: 3px 0 0 3px;
+  transform: rotate(180deg);
+}
+
+/* default button */
+.btn{
+  font-size: 30px;
+  background: #0BD11F;
+  border: none;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+/* Button for SlideShow */
+.get-started{
+  position: absolute;
+  transform: translate(-50%, -150%);
+  width: 200px;
+  height: 50px;
+  border: 3px solid #000000;
+  
+  }
+
+.learn-more{
+  background: #09B1BC;
+  margin: 25px;
+  padding: 2.5%;
+  color: white;
+  float: right;
+  Margin-right: 25px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.purchase{
+  background-color:#0BD11F;
+  margin: 0;
+  padding: 2.5%;
+  color: white;
+  width: 70%;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* ~~SERVICES PAGE~~ */
+.service-container{
+  padding: 10px;
+  color: whitesmoke;
+}
+.backgrd{
+  background: #777575;
+  width: 65%;
+  margin: auto;
+  color: whitesmoke;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, .5);
+  margin-bottom: 1%;
+}
+
+.backgrd:not(.main)
+{
+  width: 45%;
+}
+
+.grid-container {
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: min-content auto auto;
+}
+
+.item1 img{
+  width: 100px;
+  display: block;
+  margin: 20px;
+  margin-right: 50px;
+}
+
+.item3{
+  justify-content: center;
+  padding-top: 5%;
+  vertical-align: middle;
+}
+
+/* Spacer */
+
+.spacer{
+  min-height: 90px;
+}
+
+/* Footer */
+.footer{
+  width: 40%;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Service Page */
+
+.flex-service-container{
+  display: flex;
+}
+.flex-service{
+  justify-content: center;
+  text-align: center;
+}
+.flex-service img{
+  width: 300px;
+  display: block;
+  margin: 20px;
+}
+.profile-img{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 75%;
+}
+
+.review{
+  word-spacing: 0px;
+  margin-right: 40px;
+}
+.review-date{
+  color: rgba(255, 255, 255, 0.397);
+  position: relative;
+  margin-top: -2%;
+  margin-left: 10px;
+  margin-bottom: -2%;
+}
+
+.description{
+  padding: 10px;
+  
+  border-left: 2px solid #f3750088;
+  border-bottom: 2px solid #f3750088;
+}
+
+
