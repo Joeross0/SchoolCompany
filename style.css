@@ -141,7 +141,7 @@ h2, h1{
   padding: 10px;
   color: whitesmoke;
 }
-.backgrd{
+.backgrd {
   background: var(--grey);
   width: 65%;
   margin: auto;
@@ -154,7 +154,6 @@ h2, h1{
 {
   width: 45%;
 }
-
 .grid-container {
   display: grid;
   grid-row: auto;
@@ -256,5 +255,5 @@ h2, h1{
 }
 .reviewContainer {
   display: grid;
-  grid-template-rows: 3
+ grid-template-columns: min-content auto auto;
 }
