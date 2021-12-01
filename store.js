@@ -4,6 +4,7 @@ class Service{
     constructor(service, serviceDescription){
         let title = service;
         let description = serviceDescription;
+        let imgURL = "";
         let reviews = {
         } 
     }
@@ -93,7 +94,7 @@ function Services(){
 }
 
 function ServiceFill(){
-    
+    let serviceContainer = document.querySelector("")
 }
 
 function AddTopPost(user){
