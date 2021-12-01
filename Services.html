@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<title>Services</title>
 </head>
 <body>
     <header>
@@ -45,14 +46,14 @@
     <h2><center>Basic Services</center></h2>
         <div class="backgrd">
 
-            <div class="grid-container">
+            <div class="grid-container service">
                 <div class="grid item1"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"></div>
                 <div class="grid item2">
                     <h2>Tier One</h2>
                     <p class="description">Service Description</p>
                 </div>
                 <div class="grid item3">
-                    <form action="Service.html">
+                    <form action="Service.html" onsubmit="SendService('Tier One')">
                         <input class="learn-more btn" type="submit" value="Learn More">
                     </form>
                 </div>
@@ -60,14 +61,14 @@
         </div>
     <div class="backgrd">
 
-        <div class="grid-container">
+        <div class="grid-container service">
             <div class="grid item1"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"></div>
             <div class="grid item2">
                 <h2>Tier Two</h2>
                 <p class="description">Service Description</p>
             </div>
             <div class="grid item3">
-                <form action="Service.html">
+                <form action="Service.html"  onsubmit="SendService('Tier Two')">
                     <input class="learn-more btn" type="submit" value="Learn More">
                   </form>
             </div>
@@ -77,14 +78,14 @@
     <h2><center>Premium Services</center></h2>
     <div class="backgrd">
 
-        <div class="grid-container">
+        <div class="grid-container service">
             <div class="grid item1"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"></div>
             <div class="grid item2">
                 <h2 style="color: rgb(255, 217, 0);">Gold</h2>
                 <p class="description">Service Description</p>
             </div>
             <div class="grid item3">
-                <form action="Service.html">
+                <form action="Service.html" onsubmit="SendService('Gold')">
                     <input class="learn-more btn" type="submit" value="Learn More">
                 </form>
             </div>
@@ -92,14 +93,14 @@
     </div>
     <div class="backgrd">
 
-        <div class="grid-container">
+        <div class="grid-container service">
             <div class="grid item1"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"></div>
             <div class="grid item2">
                 <h2 style="color: rgb(226, 112, 255);">Premium</h2>
                 <p class="description">Service Description</p>
             </div>
             <div class="grid item3">
-                <form action="Service.html">
+                <form action="Service.html" onsubmit="SendService('Premium')">
                     <input class="learn-more btn" type="submit" value="Learn More">
                   </form>
             </div>
@@ -107,14 +108,14 @@
     </div>
     <div class="backgrd">
 
-        <div class="grid-container">
+        <div class="grid-container service">
             <div class="grid item1"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"></div>
             <div class="grid item2">
                 <h2 style="color: rgb(125, 240, 255);">Platinum</h2>
                 <p class="description">Service Description</p>
             </div>
             <div class="grid item3">
-                <form action="Service.html">
+                <form action="Service.html" onsubmit="SendService('Platinum')">
                     <input class="learn-more btn" type="submit" value="Learn More">
                   </form>
             </div>
@@ -137,6 +138,7 @@
 
 
 </body>
+<script src="store.js"></script>
 <footer>
     <div class="service-container">
         <div class="footer">

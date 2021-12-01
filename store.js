@@ -1,19 +1,18 @@
 // TODO: refactors names of the variables and add what I need to.
 
 class Service{
-    constructor(service, serviceDescription){
-        let title = service;
-        let description = serviceDescription;
-        let imgURL = "";
-        let reviews = {
-        } 
+    constructor(service, serviceDescription, imgPATH="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"){
+        this.title = service;
+        this.description = serviceDescription;
+        this.imgURL = imgPATH;
+        this.reviews = []
     }
 
-    AddReviewToService(author, date, review){
+    AddReviewToService(author, date, post){
         let review = {
             author: author,
             date: date,
-            review: review
+            review: post
         };
 
         this.service.reviews.push(review);
@@ -28,7 +27,7 @@ serviceList = [
     platinum= new Service("Platinum", "Our Advanced Dedicated Hosting Plan"),
 
 ];
-randomCount = 0;
+
 
 //Creating Reviews
 function createRandomReviews(service){
@@ -90,11 +89,26 @@ function Home(){
 }
 
 function Services(){
-
+    let serviceContainer = document.getElementsByClassName("service");
+    for (let index = 0; index < serviceList.length; index++) {
+        let service = serviceList[index];
+        serviceContainer[index].getElementsByClassName("description")[0].innerHTML = service.description;
+        serviceContainer[index].getElementsByTagName("img")[0].src = service.imgURL;
+        //console.log(service.title + " " + service.description);
+        //console.log(serviceList[index])
+    }
 }
 
 function ServiceFill(){
-    let serviceContainer = document.querySelector("")
+    let serviceContainer = document.getElementsByClassName("service")[0];
+    service = FindService(localStorage["service"])
+
+    let serviceTitle = serviceContainer.getElementsByTagName("h2")[0];
+    let serviceDescription = serviceContainer.getElementsByTagName("p")[0];
+    let serviceImg = serviceContainer.getElementsByTagName("img")[0];
+    serviceTitle.innerHTML = service.title;
+    serviceDescription.innerHTML = service.description;
+    serviceImg.src = service.imgURL;
 }
 
 function AddTopPost(user){
@@ -116,7 +130,7 @@ function AddTopPost(user){
 }
 
 // Passes Data from this page to the author page
-function Sendservice(service){
+function SendService(service){
     localStorage.setItem("service", service);
 }
 
