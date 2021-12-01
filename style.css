@@ -16,7 +16,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:hover {
+nav a:hover {
   background-color: #474747;
 }
 .button {
@@ -152,7 +152,7 @@ h2, h1{
 
 .backgrd:not(.main)
 {
-  width: 45%;
+  width: 55%;
 }
 .grid-container {
   display: grid;
