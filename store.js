@@ -1,91 +1,44 @@
 // TODO: refactors names of the variables and add what I need to.
 
-class BlogUser{
-    constructor(service){
-        let currentDate = new Date();
-        let cDay = currentDate.getDate();
-        let cMonth = currentDate.getMonth() + 1;
-        let cYear = currentDate.getFullYear();
-    
-        let user = {
-            service: service,
-            joinDate: cDay + "/" + cMonth + "/" + cYear,
-            comments: [],
-            posts: []
-        };
-
-        this.user = user
+class Service{
+    constructor(service, serviceDescription){
+        let title = service;
+        let description = serviceDescription;
+        let reviews = {
+        }
     }
 
-    AddCommentToProfile(text, author){
-        let currentDate = new Date();
-        let cDay = currentDate.getDate();
-        let cMonth = currentDate.getMonth() + 1;
-        let cYear = currentDate.getFullYear();
-
-        let parsedDate = cDay + "/" + cMonth + "/" + cYear
-
-        let comment = {
-            service: author,
-            text: text,
-            date: parsedDate
-        };
-
-        this.user.comments.push(comment);
-    }
-    AddCommentToPost(text, author, postValue){ //Adds comments to the users own posts
-        let currentDate = new Date();
-        let cDay = currentDate.getDate();
-        let cMonth = currentDate.getMonth() + 1;
-        let cYear = currentDate.getFullYear();
-
-        let parsedDate = cDay + "/" + cMonth + "/" + cYear
-
-        let comment = {
-            service: author,
-            text: text,
-            date: parsedDate
-        };
-
-        this.user.posts[postValue].comments.push(comment);
-    }
-    AddPost(title, author, description){
-        let currentDate = new Date();
-        let cDay = currentDate.getDate();
-        let cMonth = currentDate.getMonth() + 1;
-        let cYear = currentDate.getFullYear();
-
-        let parsedDate = cDay + "/" + cMonth + "/" + cYear
-
-        let post = {
-            title: title,
-            description: description,
+    AddReviewToService(author, date, review){
+        let review = {
             author: author,
-            date: parsedDate,
-            comments: []
+            date: date,
+            review: review
         };
 
-        this.user.posts.push(post);
+        this.service.reviews.push(review);
     }
 }
 
 
 //Creating Users
-userList = [
-    userA = new BlogUser("Joseph"),
-    userB = new BlogUser("Abby"),
-    userC = new BlogUser("Mike")
+serviceList = [
+    tierOne = new Service("Tier One"),
+    tierTwo = new Service("Tier Two"),
+    gold    = new Service("Gold"),
+    premium = new Service("Premium"),
+    platinum= new Service("Platinum"),
+
 ];
 randomCount = 0;
 
+//Creating Reviews
+function createRandomReviews(service){
+    let reviewList = {
 
-//Generating UserData
-function genBlogStuff (myuser) {
-    myuser.AddPost("New Post " + randomCount, myuser.user.service, "this is a post description by: " + myuser.user.service);
-    myuser.AddCommentToProfile("Hey, my name is " + myuser.user.service, myuser.user.service);
-    myuser.AddCommentToPost("Hi, whats up? my name is" + myuser.user.service, myuser.user.service, 0);
-    randomCount++;
+    }
 }
+
+
 userList.forEach(user => {
     genBlogStuff(user)
     console.log(user.user)
