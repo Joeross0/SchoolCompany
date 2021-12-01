@@ -45,12 +45,6 @@ function createRandomReviews(service){
 }
 
 
-userList.forEach(user => {
-    genBlogStuff(user)
-    console.log(user.user)
-});
-
-
 // Check browser support -- This saves data accrossed the pages
 if (typeof(Storage) !== "undefined") {
     // Store
@@ -70,12 +64,12 @@ else{
 
 
 //TODO: you need to implement all the data to the screen, pass it on to the next page, then fix small miskates if theres time.
-function FindUser(service)
+function FindService(service)
 {
     let n;
-    userList.forEach(user => {
-        if(service == user.user.service)
-            n = user
+    serviceList.forEach(s => {
+        if(service == s.title)
+            n = s
     });
     return n
 }
@@ -90,6 +84,8 @@ function Home(){
     let temp = document.getElementsByClassName("post")[0];
     postCotainer.removeChild(temp);
     */
+
+
 }
 
 function Services(){
@@ -97,7 +93,7 @@ function Services(){
 }
 
 function ServiceFill(){
-
+    
 }
 
 function AddTopPost(user){
