@@ -5,7 +5,7 @@ class Service{
         let title = service;
         let description = serviceDescription;
         let reviews = {
-        }
+        } 
     }
 
     AddReviewToService(author, date, review){
@@ -60,9 +60,14 @@ if (typeof(Storage) !== "undefined") {
 //This Determines the page you are on
 if(document.title == "Home")
     Home();
+else if(document.title == "Services")
+    Services();
+else if(document.title == "Service")
+    ServiceFill();
 else{
-    User();
+    console.log("CANNOT FIND CORRECTION FUNCTION FOR PAGE TITLE!!")
 }
+
 
 //TODO: you need to implement all the data to the screen, pass it on to the next page, then fix small miskates if theres time.
 function FindUser(service)
@@ -74,16 +79,29 @@ function FindUser(service)
     });
     return n
 }
+
+
 function Home(){
-    
+    /* OLD EXAMPLE CODE 
     userList.forEach(user => {
         AddTopPost(user);
     });
     let postCotainer = document.getElementsByClassName("posts")[0];
     let temp = document.getElementsByClassName("post")[0];
     postCotainer.removeChild(temp);
+    */
 }
+
+function Services(){
+
+}
+
+function ServiceFill(){
+
+}
+
 function AddTopPost(user){
+    
     let postCotainer = document.getElementsByClassName("posts")[0];
     let temp = document.getElementsByClassName("post")[0];
     let postClone = temp.cloneNode(true);
