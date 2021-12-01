@@ -18,24 +18,30 @@ class Service{
         this.service.reviews.push(review);
     }
 }
-
-
 //Creating Users
 serviceList = [
-    tierOne = new Service("Tier One"),
-    tierTwo = new Service("Tier Two"),
-    gold    = new Service("Gold"),
-    premium = new Service("Premium"),
-    platinum= new Service("Platinum"),
+    tierOne = new Service("Tier One", "Our Basic Shared Hosting Plan"),
+    tierTwo = new Service("Tier Two", "Our Advanced Shared Hosting Plan"),
+    gold    = new Service("Gold", "Our Semi-Dedicated Hosting Plan"),
+    premium = new Service("Premium", "Our Basic Dedicated Hosting Plan"),
+    platinum= new Service("Platinum", "Our Advanced Dedicated Hosting Plan"),
 
 ];
 randomCount = 0;
 
 //Creating Reviews
 function createRandomReviews(service){
-    let reviewList = {
-
-    }
+    serviceList.forEach(tier => {
+        tier.AddReviewToService("John Doe", "12/1/2006", `${service.title} was amazing. ${service.title} is the perfect service for my small business`)
+        tier.AddReviewToService("Jane Doe", "5/4/2006", `${service.title} was awesome`)
+        tier.AddReviewToService("Janny Doe", "6/3/2006", `${service.title} is exactly what we need`)
+        tier.AddReviewToService("Joe Doey", "7/12/2006", `This host is my go to for getting any service up and running. What I use is ${service.title}`)
+        tier.AddReviewToService("Johnny Doe", "7/31/2006", `I bought ${service.title} after recommendations from my friends, and the quality did not disappoint`)
+        tier.AddReviewToService("James Don", "9/5/2006", `${service.title} is my favorite hosting service to date. Fast service and stable connection`)
+        tier.AddReviewToService("Janet Dos", "9/22/2006", `I was in a pinch with trying to find a good hosting service, but with the help of ${service.title}, all my fears went away`)
+        tier.AddReviewToService("Jonathan Dose", "10/2/2006", `${service.title} is great, and the price point leaves me a satisfied customer`)
+        tier.AddReviewToService("Jenny Deo", "11/5/2006", `I loved ${service.title}. Would buy again`)
+    });
 }
 
 
