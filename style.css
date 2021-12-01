@@ -16,8 +16,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
-nav a:hover {
-  background-color: var(--grey);
+a:hover {
+  background-color: #474747;
 }
 .button {
   margin: 10px 70px 10px 70px; /* So that you don't keep forgetting: margin format goes top right bottom left */
@@ -113,6 +113,7 @@ h2, h1{
   Margin-right: 25px;
   height: 50px;
   vertical-align: middle;
+  text-align: center;
 }
 .serviceButton {
   background-color: var(--blue);
