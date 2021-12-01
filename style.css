@@ -30,14 +30,16 @@ img {vertical-align: middle;}
 h2, h1{
   text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.267);
 }
+.title, .slogan {
+  text-align: center;
+}
 
 /* Slideshow container */
 .slideshow-container, .service-container{
   position: relative;
   margin: auto;
   background-color: #f3750088;
-
-
+  padding-top: 15px;
 }
 
 .slidshow-background{
@@ -74,13 +76,13 @@ h2, h1{
 .next {
   right: 5%;
   border-radius: 3px 0 0 3px;
-  
+
 }
 .prev{
   left: 5%;
   border-radius: 3px 0 0 3px;
   transform: rotate(180deg);
-  
+
 }
 
 /* default button */
@@ -90,6 +92,7 @@ h2, h1{
   border: none;
   box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+  cursor: pointer;
 }
 /* Button for SlideShow */
 .get-started{
@@ -250,4 +253,7 @@ h2, h1{
   text-align: center;
   padding: 25px;
 }
-
+.reviewContainer {
+  display: grid;
+  grid-template-rows: 3
+}
