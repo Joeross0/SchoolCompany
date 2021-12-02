@@ -1,21 +1,21 @@
 // TODO: refactors names of the variables and add what I need to.
 
 class Service{
-    constructor(service, serviceDescription, imgPATH="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.notonthehighstreet.com%2Fsystem%2Fproduct_images%2Fimages%2F002%2F273%2F913%2Foriginal_wedding-diamante-and-pearl-place-card-holder.jpg&f=1&nofb=1"){
+    constructor(service, serviceDescription, imgPATH="https://gundambuilder.com/wp-content/uploads/2014/03/temp-img-gundam-dynames-300x225.jpg"){
         this.title = service;
         this.description = serviceDescription;
         this.imgURL = imgPATH;
-        this.reviews = []
+        this.reviews = [];
     }
 
-    AddReviewToService(author, date, post){
+    AddReviewToService(img, author, date, post){
         let review = {
+            image: img,
             author: author,
             date: date,
             review: post
         };
-
-        this.service.reviews.push(review);
+        this.reviews.push(review);
     }
 }
 //Creating Users
@@ -30,17 +30,18 @@ serviceList = [
 
 
 //Creating Reviews
-function createRandomReviews(service){
+function createRandomReviews(){
+    defaultimg="https://gundambuilder.com/wp-content/uploads/2014/03/temp-img-gundam-dynames-300x225.jpg"
     serviceList.forEach(tier => {
-        tier.AddReviewToService("John Doe", "12/1/2006", `${service.title} was amazing. ${service.title} is the perfect service for my small business`)
-        tier.AddReviewToService("Jane Doe", "5/4/2006", `${service.title} was awesome`)
-        tier.AddReviewToService("Janny Doe", "6/3/2006", `${service.title} is exactly what we need`)
-        tier.AddReviewToService("Joe Doey", "7/12/2006", `This host is my go to for getting any service up and running. What I use is ${service.title}`)
-        tier.AddReviewToService("Johnny Doe", "7/31/2006", `I bought ${service.title} after recommendations from my friends, and the quality did not disappoint`)
-        tier.AddReviewToService("James Don", "9/5/2006", `${service.title} is my favorite hosting service to date. Fast service and stable connection`)
-        tier.AddReviewToService("Janet Dos", "9/22/2006", `I was in a pinch with trying to find a good hosting service, but with the help of ${service.title}, all my fears went away`)
-        tier.AddReviewToService("Jonathan Dose", "10/2/2006", `${service.title} is great, and the price point leaves me a satisfied customer`)
-        tier.AddReviewToService("Jenny Deo", "11/5/2006", `I loved ${service.title}. Would buy again`)
+        tier.AddReviewToService(defaultimg, "John Doe", "12/1/2031", `${tier.title} was amazing. ${tier.title} is the perfect service for my small business`);
+        tier.AddReviewToService(defaultimg, "Jane Doe", "5/4/2026", `${tier.title} was awesome`);
+        tier.AddReviewToService(defaultimg, "Janny Doe", "6/3/2045", `${tier.title} is exactly what we need`);
+        tier.AddReviewToService(defaultimg, "Joe Doey", "7/12/2034", `This host is my go to for getting any service up and running. What I use is ${tier.title}`);
+        tier.AddReviewToService(defaultimg, "Johnny Doe", "7/31/2036", `I bought ${tier.title} after recommendations from my friends, and the quality did not disappoint`);
+        tier.AddReviewToService(defaultimg, "James Don", "9/5/2306", `${tier.title} is my favorite hosting service to date. Fast service and stable connection`);
+        tier.AddReviewToService(defaultimg, "Janet Dos", "9/22/2603", `I was in a pinch with trying to find a good hosting service, but with the help of ${tier.title}, all my fears went away`);
+        tier.AddReviewToService(defaultimg, "Jonathan Dose", "10/2/2036", `${tier.title} is great, and the price point leaves me a satisfied customer`);
+        tier.AddReviewToService(defaultimg, "Jenny Deo", "11/5/1605", `I loved ${tier.title}. Would buy again`);
     });
 }
 
@@ -62,8 +63,29 @@ else{
     console.log("CANNOT FIND CORRECTION FUNCTION FOR PAGE TITLE!!")
 }
 
+//Populating Services with Reviews
+function FillReviews(service){
+    createRandomReviews();
+    service.reviews.forEach(review => {
+        let reviewTemplate = document.getElementsByClassName("review-template")[0];
+        let tempContainer = reviewTemplate.parentElement;
+        let postClone = reviewTemplate.cloneNode(true);
 
-//TODO: you need to implement all the data to the screen, pass it on to the next page, then fix small miskates if theres time.
+        let username = postClone.getElementsByTagName("h2")[0]
+        let date = postClone.getElementsByClassName("date")[0];
+        let description = postClone.getElementsByClassName("description")[0];
+        let image = postClone.getElementsByTagName("img")[0];
+
+        username.innerHTML = review.author;
+        date.innerHTML = review.date;
+        description.innerHTML = review.review;
+        image.src = review.image;
+
+        tempContainer.appendChild(postClone);
+    });
+}
+
+// Returns the service, finds the service by the title of it(string)
 function FindService(service)
 {
     let n;
@@ -72,6 +94,10 @@ function FindService(service)
             n = s
     });
     return n
+}
+// Passes Data from this page to the author page
+function SendService(service){
+    localStorage.setItem("service", service);
 }
 
 
@@ -84,8 +110,31 @@ function Home(){
     let temp = document.getElementsByClassName("post")[0];
     postCotainer.removeChild(temp);
     */
+    createRandomReviews();
+   reviews = [
+       tierTwo.reviews[3],
+       gold.reviews[2],
+       platinum.reviews[4]
+   ]
 
+    reviews.forEach(review => {
+        let reviewTemplate = document.getElementsByClassName("review-template")[0];
+        let tempContainer = reviewTemplate.parentElement;
+        let postClone = reviewTemplate.cloneNode(true);
 
+        let username = postClone.getElementsByTagName("h2")[0]
+        let date = postClone.getElementsByClassName("date")[0];
+        let description = postClone.getElementsByClassName("description")[0];
+        let image = postClone.getElementsByTagName("img")[0];
+
+        username.innerHTML = review.author;
+        date.innerHTML = review.date;
+        description.innerHTML = review.review;
+        image.src = review.image;
+
+        tempContainer.appendChild(postClone);
+    });
+    document.getElementsByClassName("review-template")[0].remove();
 }
 
 function Services(){
@@ -100,6 +149,7 @@ function Services(){
 }
 
 function ServiceFill(){
+    //Fill Service Info(title, img, descriptions)
     let serviceContainer = document.getElementsByClassName("service")[0];
     service = FindService(localStorage["service"])
 
@@ -109,67 +159,14 @@ function ServiceFill(){
     serviceTitle.innerHTML = service.title;
     serviceDescription.innerHTML = service.description;
     serviceImg.src = service.imgURL;
+
+    //Fill Reviews
+    FillReviews(service);
+    document.getElementsByClassName("review-template")[0].remove();
 }
 
-function AddTopPost(user){
-    
-    let postCotainer = document.getElementsByClassName("posts")[0];
-    let temp = document.getElementsByClassName("post")[0];
-    let postClone = temp.cloneNode(true);
-
-    let postTitle = postClone.getElementsByTagName("h4")[0];
-    let postAuthor = postClone.getElementsByTagName("a")[0];
-    let postDescription = postClone.getElementsByTagName("p")[0];
-
-    postTitle.innerHTML = user.user.posts[0].title;
-    postAuthor.innerHTML = user.user.posts[0].author;
-    postAuthor.onclick = function() {Sendservice(user.user.service)};
-    postDescription.innerHTML = user.user.posts[0].description;
-
-    postCotainer.appendChild(postClone);
-}
-
-// Passes Data from this page to the author page
-function SendService(service){
-    localStorage.setItem("service", service);
-}
-
-function User(){
-    user = FindUser(localStorage["service"]);
-    comments = user.user.comments;
-    let service = document.getElementById("profile-title");
-    let lastpost = document.getElementById("profile-lastpost");
-    let firstjoined = document.getElementById("profile-firstjoined");
-    let description = document.getElementById("profile-description");
-
-    service.innerHTML = user.user.service;
-    postLength = user.user.posts.length;
-    lastpost.innerHTML += user.user.posts[postLength - 1].title + " - " + user.user.posts[postLength - 1].date;
-    firstjoined.innerHTML += user.user.joinDate;
-
-    comments.forEach(comment => {
-        AddComment(comment);
-    });
-    let postCotainer = document.getElementsByClassName("comment-section")[0];
-    let temp = document.getElementsByClassName("post")[0];
-    postCotainer.removeChild(temp)
-}
-function AddComment(comment){
 
 
-    let postCotainer = document.getElementsByClassName("comment-section")[0];
-    let temp = document.getElementsByClassName("post")[0];
-    let postClone = temp.cloneNode(true);
-
-    let service = postClone.getElementsByTagName("h4")[0];
-    let commentText = postClone.getElementsByTagName("p")[0];
-
-    service.innerHTML = comment.service;
-    commentText.innerHTML = comment.text;
-
-    postCotainer.appendChild(postClone);
-
-}
 
 
 

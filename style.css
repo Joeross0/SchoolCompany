@@ -3,6 +3,10 @@
   --green:  #0BD11F;
   --blue: #09B1BC;
   --grey: #777575;
+
+  --gold: rgb(221, 188, 1);
+  --premium: rgb(226, 112, 255);
+  --platinum: rgb(105, 203, 216);
 }
 
 nav {
@@ -118,13 +122,11 @@ h2, h1{
 .serviceButton {
   background-color: var(--blue);
   color: white;
-
-  padding: 5%;
+  padding: 3%;
   text-align: center;
-  padding: 5px;
   font-size: 1.5em;
   width: 55%;
-  margin: auto;
+  margin-left: 23%;
 }
 
 .purchase{
@@ -243,7 +245,15 @@ h2, h1{
   border-collapse: collapse;
   width: 20%;
   padding: 10px;
+  padding-bottom: 50px;
   margin: 0px;
+}
+.serviceBox img{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 75%;
 }
 .serviceHeader {
   text-align: center;
@@ -251,7 +261,7 @@ h2, h1{
 }
 .serviceText {
   text-align: center;
-  padding: 25px;
+  padding-bottom: 10px;
 }
 .reviewContainer {
   display: grid;
