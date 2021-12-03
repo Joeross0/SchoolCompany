@@ -20,18 +20,18 @@ class Service{
 }
 //Creating Users
 serviceList = [
-    tierOne = new Service("Tier One", "Our Basic Shared Hosting Plan"),
-    tierTwo = new Service("Tier Two", "Our Advanced Shared Hosting Plan"),
-    gold    = new Service("Gold", "Our Semi-Dedicated Hosting Plan"),
-    premium = new Service("Premium", "Our Basic Dedicated Hosting Plan"),
-    platinum= new Service("Platinum", "Our Advanced Dedicated Hosting Plan"),
+    tierOne = new Service("Tier One", "Our Basic Shared Hosting Plan", "assets/Tier One.png"),
+    tierTwo = new Service("Tier Two", "Our Advanced Shared Hosting Plan", "assets/Tier One.png"),
+    gold    = new Service("Gold", "Our Semi-Dedicated Hosting Plan", "assets/gold Tier.png"),
+    premium = new Service("Premium", "Our Basic Dedicated Hosting Plan", "assets/Premium Tier.png"),
+    platinum= new Service("Platinum", "Our Advanced Dedicated Hosting Plan", "assets/Platinum Tier.png"),
 
 ];
 
 
 //Creating Reviews
 function createRandomReviews(){
-    defaultimg="https://gundambuilder.com/wp-content/uploads/2014/03/temp-img-gundam-dynames-300x225.jpg"
+    defaultimg="assets/profileEmpty.png"
     serviceList.forEach(tier => {
         tier.AddReviewToService(defaultimg, "John Doe", "12/1/2031", `${tier.title} was amazing. ${tier.title} is the perfect service for my small business`);
         tier.AddReviewToService(defaultimg, "Jane Doe", "5/4/2026", `${tier.title} was awesome`);
