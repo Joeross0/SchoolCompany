@@ -1,0 +1,73 @@
+/* Start of the about us heading styling */
+.award-text {
+    line-height: 29px;
+}
+
+.about-container {
+    margin: auto;
+    display: inline-block;
+    background-color: #f3750088;
+    padding: 10px 0;
+}
+
+.about-container-heading {
+    padding-top: 20px;
+    font-size: 2rem;
+}
+
+.about-container-subheading {
+    margin: 30px 0 10px;
+}
+.about-container-subheading:first-child {
+    margin-top: 0;
+}
+
+
+.center {
+    text-align: center;
+}
+
+#about-container-content {
+    padding: 10px 50px 50px;
+}
+
+.about-container-par {
+    margin-left: 30px;
+    line-height: 30px;
+    margin-top: 0;
+}
+/* end of the about us heading styling */
+
+/* Start of the contact info styling */
+#contact-info-container {
+    background-color: #f3750088;
+    color: whitesmoke;
+    padding: 20px 0;
+    margin-bottom: 4rem;
+}
+
+#contact-heading {
+
+}
+
+.content {
+    flex: 50%;
+    margin: 60px 0;
+    align-self: flex-end;
+}
+
+.contact-para {
+    text-align: right;
+}
+
+#contact-container-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 20px;
+    width: 70%;
+    margin: 40px auto;
+    background-color: var(--grey);
+}
+
+/* end of the contact info styling */
